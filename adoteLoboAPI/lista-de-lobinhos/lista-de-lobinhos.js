@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",  async function() {
     
 
-    ///let lobos = JSON.parse(localStorage.getItem("lobos")) || [];
+    //let lobos = JSON.parse(localStorage.getItem("lobos")) || [];
     
     let lobos ; 
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded",  async function() {
         console.log(error)
 
     }
-
+    
     
      
     
@@ -73,8 +73,21 @@ document.addEventListener("DOMContentLoaded",  async function() {
                     botao.disabled = false;
     
                     // Salvar lobo no localStorage ao clicar no botão "Adotar"
-                    botao.addEventListener("click", function() {
-                        localStorage.setItem("loboSelecionado", JSON.stringify(paginatedLobos[index]));
+                    
+                    botao.addEventListener("click", async function() {
+                        
+                        
+                        //localStorage.setItem("loboSelecionado", JSON.stringify(paginatedLobos[index]));
+                        //fazer o post para loboSelecionado
+                        let response = await fetch("http://localhost:3000/loboSelecionado/" , {
+                            method : 'POST',
+                            headers : {
+                                'Content-Type' : 'application/json'
+                            },
+                            body : JSON.stringify( paginatedLobos[index] ) 
+                        })
+                        
+
                         window.location.href = "../show-lobinho/show_lobinho.html";
                     });
                 }
