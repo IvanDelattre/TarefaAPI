@@ -1,0 +1,239 @@
+/* Estilizações Globais */
+body {
+    margin: 0;
+    padding: 0px;
+}
+
+/*--------------------------------------HEADER PADRONIZADO----------------------------------------------------------*/
+header {
+    margin-bottom: 75px;
+    width: 100vw;
+    height: 130px;
+    background-color: rgba(133, 205, 245, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#headerLogo {
+    transition: transform 0.2s ease;
+}
+#headerLogo:hover {
+    transform: scale(0.8);
+}                                                     /* HEADER PADRONIZADO */
+.link {
+   font-family: 'Darker Grotesque', sans-serif;
+   font-weight: 700;
+   font-size: 30px;
+   text-decoration: none;
+   color: rgba(51, 51, 51, 1);
+   border: none;
+   transition: transform 0.2s ease;
+}
+.link:hover {
+    color: #04a76b;
+    transform: scale(1.5)
+}
+/*--------------------------------------HEADER PADRONIZADO-----------------------------------------------------------------*/
+
+/*-------------------------------------------MAIN---------------------------------------------------------------------------*/
+
+.filtrolobos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.filtrolobos #pesquisarlobo{
+    width: 800px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 15px;
+    
+}
+
+.filtrolobos div button {
+    font-family: "Darker Grotesque";
+    font-size: 20px;
+    width: 130px;
+    height: 35px;
+    background-color: #DEB959;
+    color: white;
+    border: none;
+}
+
+.checkbox {
+    font-family: "Darker Grotesque";
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+    margin-right: 775px;
+}
+
+.exibirlobos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lobo{
+    display:flex;
+    flex-direction: row;
+    margin-top: 50px;
+    width: 1000px;
+    height: 360px;
+}
+
+.nomeebotao{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nomeebotao button{
+    width: 150px;
+    height: 45px;
+    font-size: 30px;
+    background-color: #DEB959;
+    border: none;
+    color: white;
+}
+
+.nomeebotao2{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nomeebotao2 button{
+    width: 150px;
+    height: 45px;
+    font-size: 30px;
+    background-color: #DEB959;
+    border: none;
+    color: white;
+}
+
+.descricao2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.fotoetexto{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.fotoetexto2{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+.fotoetexto img{
+    width: 430px;
+    height: 330px;
+    border: 1px solid black;
+}
+
+#pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.foto {
+    width: 430px;
+    height: 328px;
+    object-fit: cover;
+}
+/*-------------------------------------------MAIN---------------------------------------------------------------------------*/
+
+/*-------------------------------------FOOTER PADRONIZADO---------------------------------------------------------------*/
+footer {
+    width: 100%;
+    height: 270px;
+    background-color: rgba(51, 51, 51, 1);
+}
+#footerBorder {
+    background-image: linear-gradient(to left, #2C5680, #DEB959);
+    width: 100%;
+    height: 5px;
+    margin-top: 120px
+}
+#footerOrganizer {
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 350px;
+    background-color: #353535;
+}
+#footerDatasMapDiv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 678px
+}
+#footerDatasDiv {
+    display: flex;
+    flex-direction: column;
+}
+.footerData {
+    font-size: 18px;
+    color: white;
+    font-family: 'Darker Grotesque';
+}                                                           /* FOOTER PADRONIZADO  */
+#footerButtonDiv {
+    width: 144px;
+    height: 30px;
+    background-color: #DEB959;
+    margin-top: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: 0.2s ease;
+    
+    &:hover {
+        color: #04a76b;
+        transform: scale(0.8);
+    }
+}
+#footerButton {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: #353535;
+    text-decoration: none;
+    transition: 0.2s ease;
+
+    &:hover {
+        color: #04a76b;
+        transform: scale(0.8);
+        transition: 0.2s ease;
+    }
+}
+#footerLogoDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+#footerLogo {
+    transition: 0.2s ease;
+
+    &:hover {
+        transform: scale(0.8);
+        cursor: pointer;
+    }
+}
+/*-------------------------------------FOOTER PADRONIZADO----------------------------------------------------------------*/

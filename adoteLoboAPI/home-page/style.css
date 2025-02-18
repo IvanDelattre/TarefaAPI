@@ -1,0 +1,243 @@
+/* Estilizações Globais*/
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*--------------------------------------HEADER PADRONIZADO----------------------------------------------------------*/
+header {
+    width: 100%;
+    height: 130px;
+    background-color: rgba(133, 205, 245, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#headerLogo {
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(0.8);
+    }                         
+}
+                            /* HEADER PADRONIZADO */
+.link {
+    font-family: 'Darker Grotesque', sans-serif; 
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgba(51, 51, 51, 1);
+    border: none;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        color: #04a76b;
+        transform: scale(1.5)
+    }
+}
+/*--------------------------------------HEADER PADRONIZADO-----------------------------------------------------------------*/
+
+/*-------------------------------------------MAIN---------------------------------------------------------------------------*/
+.slide, .slide img {
+    width: 100%;
+    height: 500px;
+}
+.sobre{
+    background-color: #2C5680;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+}
+.sobre h1{
+    color: #DEB959;
+    width: 112px;
+    font-size: 48px;
+    font: Darker Grotesque;
+    margin: 0px;
+}
+.sobre p{
+    width: 960px;
+    size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    color: white;
+    margin-bottom: 0px;
+}
+h1, h2, h3, p {
+    font-family: 'Darker Grotesque', sans-serif;
+}
+.valores{
+    width: 100%;
+    height: 670px;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.valores div{
+    display: flex;
+    gap: 40px;
+}
+.valores h1{
+    display: flex;
+    align-items: center;
+    width: 139px;
+    font-size: 48px ;
+    color: #DEB959;
+    margin-top: 0px;
+}
+.valores img{
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+}
+.lobos{
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lobo {
+    width: 430px;
+    height: 328px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+}
+.exemplo{
+    width: auto;
+    height: auto;
+    color: #DEB959;
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+.contLobo1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+.contLobo2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+.info_lobo1{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.info_lobo2{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.info_lobo1 h1, .info_lobo2 h1{
+    font-size: 36px;
+}
+.info_lobo1 h3, .info_lobo2 h3{
+    font-size: 20px;
+}
+.info_lobo1 p {
+    display: flex;
+    width: 461px;
+    height: 235px;
+    align-items: start;
+}
+.info_lobo2 p {
+    display: flex;
+    width: 461px;
+    height: 235px;
+    align-items: start;
+}
+/*-------------------------------------------MAIN---------------------------------------------------------------------------*/
+
+/*-------------------------------------FOOTER PADRONIZADO---------------------------------------------------------------*/
+footer {
+    width: 100%;
+    height: 270px;
+    background-color: rgba(51, 51, 51, 1);
+}
+#footerBorder {
+    background-image: linear-gradient(to left, #2C5680, #DEB959);
+    width: 100%;
+    height: 5px;
+    margin-top: 120px
+}
+#footerOrganizer {
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#footerDatasMapDiv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 678px
+}
+#footerDatasDiv {
+    display: flex;
+    flex-direction: column;
+}                                                   /* FOOTER PADRONIZADO  */
+.footerData {
+    font-size: 18px;
+    color: white;
+    font-family: 'Darker Grotesque';
+}
+#footerButtonDiv {
+    width: 144px;
+    height: 30px;
+    background-color: #DEB959;
+    margin-top: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    &:hover {
+        color: #04a76b;
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+}
+#footerButton {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: #353535;
+    text-decoration: none;
+    transition: 0.2s ease;
+
+    &:hover {
+        color: #04a76b;
+        transform: scale(1.05)
+    }
+}
+#footerLogoDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+#footerLogo {
+    transition: 0.2s ease;
+
+    &:hover {
+        transform: scale(0.8);
+        cursor: pointer;
+    }
+}
+
+/*-------------------------------------FOOTER PADRONIZADO----------------------------------------------------------------*/
