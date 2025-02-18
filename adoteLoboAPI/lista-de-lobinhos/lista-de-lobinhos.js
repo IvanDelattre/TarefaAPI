@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded",  async function() {
     
-
-    
     
     let lobos ; 
 
@@ -19,8 +17,6 @@ document.addEventListener("DOMContentLoaded",  async function() {
 
     }
     
-    
-     
     
     console.log( lobos ) ; 
     
@@ -72,28 +68,9 @@ document.addEventListener("DOMContentLoaded",  async function() {
                     botao.style.cursor = "pointer";
                     botao.disabled = false;
     
-                    // Salvar lobo no localStorage ao clicar no botão "Adotar"
+                    
                     
                     botao.addEventListener("click", async function() {
-                        
-                        
-                        
-                        //fazer o post para loboSelecionado
-                        
-                        //deletar rudo no banco de dados
-                        /*
-                        let resposta = await fetch("http://localhost:3000/loboSelecionado/") ; 
-                        lista = await resposta.json();
-                        if(lista.length){
-                            loboExcluido = lista[0] ;
-                            let dateURL = `http://localhost:3000/loboSelecionado/${loboExcluido.id}` ; 
-                            await fetch(dateURL,{
-                                method : 'DELETE'
-                            })
-
-                        }
-                         */
-
 
 
 

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    //let loboSelecionado = JSON.parse(localStorage.getItem("loboSelecionado"));
+    
     let list_lobo;
     try{
         const response =  await fetch("http://localhost:3000/loboSelecionado/", {
@@ -24,15 +24,13 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     
 
-    
-
 
     if (!loboSelecionado) {
         document.body.innerHTML = "<h1>Lobo não encontrado!</h1>";
         return;
     }
 
-    // Atualiza os elementos da página com os dados do lobo
+
     document.querySelector("#nomeLobo").innerText = `Adote o(a) ${loboSelecionado.nome}`;
     document.querySelector("#idLobo").innerText = `ID: ${loboSelecionado.id}`;
     document.querySelector("#wolfImg").src = loboSelecionado.imagem;
@@ -51,15 +49,13 @@ document.addEventListener("DOMContentLoaded", async function () {
             return;
         }
 
-        // Atualiza os dados do lobo
+        
         loboSelecionado.adotado = true;
         loboSelecionado.nomeDono = nomeDono;
         loboSelecionado.idadeDono = idadeDono;
         loboSelecionado.emailDono = emailDono;
 
-        // Atualiza o localStorage
-        //localStorage.setItem("loboSelecionado", JSON.stringify(loboSelecionado));
-
+        
         let data = "http://localhost:3000/lobos/"
         data += loboSelecionado.id ;
         

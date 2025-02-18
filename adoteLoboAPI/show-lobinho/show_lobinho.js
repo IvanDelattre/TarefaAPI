@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function() {
     
     
-    //buscar no lobo selecionado
-
-    //fazer o post para loboSelecionado
-    
-    //deletar rudo no banco de dados
     
     let resposta = await fetch("http://localhost:3000/loboSelecionado/") ; 
     lista = await resposta.json();
@@ -20,14 +15,8 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
         
 
-
-
-
-
     let loboSelecionado_list ; 
     
-    
-
 
 
     try{
@@ -84,9 +73,6 @@ document.addEventListener("DOMContentLoaded", async function() {
             
             
             
-
-            
-
             exclude = "http://localhost:3000/loboSelecionado/"
             exclude += loboSelecionado.id ;
             
@@ -95,9 +81,6 @@ document.addEventListener("DOMContentLoaded", async function() {
                 headers : {"Content-type" : "application/json"},
                 body : JSON.stringify( auxFox ) 
             })
-
-
-
 
 
             botaoAdotar.innerText = "Adotado";
@@ -125,7 +108,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         })
         
         
-
     
         window.location.href = "../lista-de-lobinhos/lista-de-lobinhos.html";
     });
