@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 adotado : true,
             }
 
-            let exclude = "http://localhost:3000/loboSelecionado/"
+            let exclude = "http://localhost:3000/lobos/"
             exclude += loboSelecionado.id ;
             
             await fetch(exclude ,{
@@ -55,13 +55,33 @@ document.addEventListener("DOMContentLoaded", async function() {
                 body : JSON.stringify( auxFox ) 
             })
             
-            let lobos = JSON.parse(localStorage.getItem("lobos")) || [];
-            lobos = lobos.map(lobo => lobo.nome === loboSelecionado.nome ? loboSelecionado : lobo);
-            localStorage.setItem("lobos", JSON.stringify(lobos));
+            
+            
+            //let lobos = JSON.parse(localStorage.getItem("lobos")) || [];
+            //loboSelecionado_list = loboSelecionado_list.map(lobo => lobo.nome === loboSelecionado.nome ? loboSelecionado : lobo);
+            //localStorage.setItem("lobos", JSON.stringify(lobos));
+
+            
+
+            exclude = "http://localhost:3000/loboSelecionado/"
+            exclude += loboSelecionado.id ;
+            
+            await fetch(exclude ,{
+                method : 'PATCH',
+                headers : {"Content-type" : "application/json"},
+                body : JSON.stringify( auxFox ) 
+            })
+
+
+
+
 
             botaoAdotar.innerText = "Adotado";
             botaoAdotar.style.backgroundColor = "green";
             botaoAdotar.disabled = true;
+
+            window.location.href = "../adotar-lobinho/adotar-lobo.html" ; 
+
         });
     }
 
