@@ -1,9 +1,34 @@
 document.addEventListener("DOMContentLoaded", async function() {
     
     
-    //let loboSelecionado = JSON.parse(localStorage.getItem("loboSelecionado"));
     //buscar no lobo selecionado
+
+    //fazer o post para loboSelecionado
+    
+    //deletar rudo no banco de dados
+    
+    let resposta = await fetch("http://localhost:3000/loboSelecionado/") ; 
+    lista = await resposta.json();
+    if(lista.length > 1 ){
+        loboExcluido = lista[0] ;
+        console.log(loboExcluido) ; 
+        let dateURL = `http://localhost:3000/loboSelecionado/${loboExcluido.id}` ; 
+        await fetch(dateURL,{
+            method : 'DELETE'
+        })
+
+    }
+        
+
+
+
+
+
     let loboSelecionado_list ; 
+    
+    
+
+
 
     try{
         const response =  await fetch("http://localhost:3000/loboSelecionado/", {
@@ -19,9 +44,11 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     }
     
+    console.log( loboSelecionado_list  ) ; 
+
     let num = loboSelecionado_list.length - 1 ; 
     let loboSelecionado = loboSelecionado_list[num] ; 
-    //console.log( loboSelecionado ) ; 
+    
 
     if (!loboSelecionado) {
         document.body.innerHTML = "<h1>Lobo não encontrado!</h1>";
@@ -40,10 +67,10 @@ document.addEventListener("DOMContentLoaded", async function() {
         botaoAdotar.disabled = true;
     } else {
         botaoAdotar.addEventListener("click", async function() {
-            //loboSelecionado.adotado = true;
-            //localStorage.setItem("loboSelecionado", JSON.stringify(loboSelecionado));
+            
+            
             let auxFox = {
-                adotado : true,
+                adotado : false,
             }
 
             let exclude = "http://localhost:3000/lobos/"
@@ -57,9 +84,6 @@ document.addEventListener("DOMContentLoaded", async function() {
             
             
             
-            //let lobos = JSON.parse(localStorage.getItem("lobos")) || [];
-            //loboSelecionado_list = loboSelecionado_list.map(lobo => lobo.nome === loboSelecionado.nome ? loboSelecionado : lobo);
-            //localStorage.setItem("lobos", JSON.stringify(lobos));
 
             
 
@@ -85,23 +109,14 @@ document.addEventListener("DOMContentLoaded", async function() {
         });
     }
 
-    // **Funcionalidade do botão "Excluir"**
+    
     let botaoExcluir = document.getElementById("excluir");
     botaoExcluir.addEventListener("click", async function() {
-        // Confirmação antes de excluir
+        
         let confirmacao = confirm(`Tem certeza que deseja excluir o lobo ${loboSelecionado.nome}?`);
         if (!confirmacao) return;
 
-        // Remove o lobo da lista geral
-
-        //let lobos = JSON.parse(localStorage.getItem("lobos")) || [];
-        //lobos = lobos.filter(lobo => lobo.nome !== loboSelecionado.nome);
-        //localStorage.setItem("lobos", JSON.stringify(lobos));
-
-        // Remove o lobo selecionado do localStorage
-        //localStorage.removeItem("loboSelecionado");
-
-        //excluir do json ; 
+        
         let exclude = "http://localhost:3000/lobos/" ; 
         exclude += loboSelecionado.id ; 
 
@@ -111,7 +126,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         
         
 
-        // Redireciona para a lista de lobos
+    
         window.location.href = "../lista-de-lobinhos/lista-de-lobinhos.html";
     });
 });

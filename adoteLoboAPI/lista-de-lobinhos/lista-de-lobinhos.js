@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",  async function() {
     
 
-    //let lobos = JSON.parse(localStorage.getItem("lobos")) || [];
+    
     
     let lobos ; 
 
@@ -77,8 +77,26 @@ document.addEventListener("DOMContentLoaded",  async function() {
                     botao.addEventListener("click", async function() {
                         
                         
-                        //localStorage.setItem("loboSelecionado", JSON.stringify(paginatedLobos[index]));
+                        
                         //fazer o post para loboSelecionado
+                        
+                        //deletar rudo no banco de dados
+                        /*
+                        let resposta = await fetch("http://localhost:3000/loboSelecionado/") ; 
+                        lista = await resposta.json();
+                        if(lista.length){
+                            loboExcluido = lista[0] ;
+                            let dateURL = `http://localhost:3000/loboSelecionado/${loboExcluido.id}` ; 
+                            await fetch(dateURL,{
+                                method : 'DELETE'
+                            })
+
+                        }
+                         */
+
+
+
+
                         let response = await fetch("http://localhost:3000/loboSelecionado/" , {
                             method : 'POST',
                             headers : {
