@@ -63,30 +63,30 @@ document.addEventListener("DOMContentLoaded", async function () {
         let data = "http://localhost:3000/lobos/"
         data += loboSelecionado.id ;
         
-        await fetch(data ,{
-            method : 'PATCH',
-            headers : {"Content-type" : "application/json"},
-            body : JSON.stringify( loboSelecionado ) 
-        })
+        try {
+            await fetch(data ,{
+                method : 'PATCH',
+                headers : {"Content-type" : "application/json"},
+                body : JSON.stringify( loboSelecionado ),
+            })
+        }catch(error) {
+            console.log(error)
+        }
         
-        /*
         data = "http://localhost:3000/loboSelecionado/"
         data += loboSelecionado.id ;
         
-        await fetch(data ,{
-            method : 'PATCH',
-            headers : {"Content-type" : "application/json"},
-            body : JSON.stringify( loboSelecionado ) 
-        })
-        */
+        try {
+            await fetch(data ,{
+                method : 'PATCH',
+                headers : {"Content-type" : "application/json"},
+                body : JSON.stringify( loboSelecionado ) 
+            })
+        }catch(error) {
+            console.log(error)
+        }
 
-
-        
-        let lobos = JSON.parse(localStorage.getItem("lobos")) || [];
-        lobos = lobos.map(lobo => (lobo.id === loboSelecionado.id ? loboSelecionado : lobo));
-        localStorage.setItem("lobos", JSON.stringify(lobos));
-
-        alert("Adoção concluída com sucesso!");
         window.location.href = "../lista-de-lobinhos/lista-de-lobinhos.html";
+       alert("Adoção concluída com sucesso!");
     });
 });
